@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "BGToll";
+}
+
+<h2>BGToll</h2>
+<h4>@ViewData["result"]</h4>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Номер на автомобил: @Html.TextBox("number")
+        <input type="submit" value="Проверка" />
+    </p>
+}
+
+<p>Номер на винетка: @ViewData["number"]</p>
+<p>Валидна до: @ViewData["active"]</p>
+<p>Клас: @ViewData["class"]</p>
+
+@ViewData["body"]
